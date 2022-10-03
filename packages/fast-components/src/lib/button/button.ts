@@ -4,10 +4,7 @@ import {
   attr,
   html,
   ViewTemplate,
-  css,
 } from '@microsoft/fast-element';
-
-import * as styles from './button.css';
 
 const template: ViewTemplate<Button> = html` <button
   type="button"
@@ -16,7 +13,7 @@ const template: ViewTemplate<Button> = html` <button
   You clicked me ${(x) => x.times} times.
 </button>`;
 
-@customElement({ name: 'tlm-button', template, styles })
+@customElement({ name: 'tlm-button', template })
 export class Button extends FASTElement {
   @attr greeting = 'Hello';
   @attr times = 0;
