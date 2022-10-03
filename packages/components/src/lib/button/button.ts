@@ -1,3 +1,5 @@
+// import '../../../../core/src/assets/styles/components';
+
 const attributes = [
   'width',
   'height',
@@ -16,9 +18,11 @@ export class Button extends HTMLElement {
     this.attachShadow({ mode: 'open' });
 
     const button = document.createElement('button');
+    button.setAttribute('part', 'button');
     button.setAttribute('type', 'button');
 
     applyAttributes(this, button);
+    applyDensity(this, button);
 
     this.shadowRoot?.append(button);
   }
@@ -41,6 +45,13 @@ function applyAttributes(wrapper: HTMLElement, button: HTMLButtonElement) {
   }
 }
 
+function applyDensity(wrapper: HTMLElement, button: HTMLButtonElement) {
+  const density = wrapper.getAttribute('density');
+  if (density) {
+    button.classList.add(`density-${density}`);
+  }
+}
+
 if ('customElements' in window) {
-  customElements.define('tmus-button', Button);
+  customElements.define('tms-button', Button);
 }
