@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 
 import 'packages/components/src/lib/button/button';
 
+import 'packages/fast-components/src/lib/button/button';
+
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
