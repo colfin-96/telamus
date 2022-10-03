@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@telamus/components": ["packages/components/src/index.ts"],
-      "@telamus/core": ["packages/core/src/index.ts"]
+      "@telamus/core": ["packages/core/src/index.ts"],
+      "@telamus/fast-components": ["packages/fast-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
